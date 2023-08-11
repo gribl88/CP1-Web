@@ -1,0 +1,62 @@
+h1 {
+    margin: 50px 40%;
+    color: aqua;
+}
+
+form {
+    /* border: 1px solid black; */
+
+    display: flex;
+    flex-direction: row;
+
+    padding-top: 10px;
+    gap: 32px;
+}
+
+legend {
+    color: chartreuse;
+    font-size: 20px;
+}
+
+.campo-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-resp {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-import {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-dep {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 6px;
+}
+
+select {
+    border-radius: 6px;
+}
+
+.btn-add {
+    padding-top: 1%;
+}
+
+table {
+    border: 1px solid yellow;
+    width: 50%;
+
+}
+
+ul {
+    list-style: none;
+    border: 1px solid green;
+}

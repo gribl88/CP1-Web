@@ -4,31 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
 
-    <div>
+    <h1>Minha Lista de Tarefas</h1>
+    
         <div>
-            <h1>Minha Lista de Tarefas</h1>
-
-            
-            <h2>Cadastre suas tarefas</h2>
+            <legend class="legenda">Nova Tarefa</legend>
             <form id="dados" method="get" action="">
-            <div>
-
-                <div>
+                <div class="campo-desc">
                     <label for="descricao">Descrição</label>
-                    <input type="text" id="descricao" name="descricao"
-                        placeholder="ex: Marcar reunião" required autofocus>
+                    <input type="text" id="descricao" name="descricao" placeholder="ex: Marcar reunião" required autofocus>
                 </div>
 
-                <div>
+                <div class="campo-resp">
                     <label for="responsavel">Responsável</label>
-                    <input type="text" id="responsavel" name="responsavel"
-                        placeholder="ex: Gabriel" required>
+                    <input type="text" id="responsavel" name="responsavel" placeholder="ex: Gabriel" required>
                 </div>
-                
-                <div>
+                    
+                <div class="campo-import">
                     <label for="importancia">Importância</label>
                     <select id="importancia" required>
                         <option value="">Selecione o nível da tarefa</option>
@@ -38,17 +33,15 @@
                     </select>
                 </div>
 
-                <div>
+                <div class="campo-dep">
                     <label for="departamento">Departamento</label>
-                    <input type="text" id="departamento" name="departamento" 
-                        placeholder="ex: Projetos" required>
+                    <input type="text" id="departamento" name="departamento" placeholder="ex: Projetos" required>
                 </div>
-            </div>
 
-            <div>
-                <button type="submit" value="">Adicionar</button>
-            </div>
-        </form>
+                <div class="btn-add">
+                    <button type="submit" value="">Adicionar</button>
+                </div>
+            </form>
         
         <div>
             <h2>Suas Tarefas</h2>
@@ -71,7 +64,7 @@
 
             </ul>
         </div>
-    </div>  
+
     <script src="./js/tarefas.js"></script>
 </body>
 </html>

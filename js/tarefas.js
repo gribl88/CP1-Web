@@ -56,9 +56,9 @@ document.querySelector('form').addEventListener('submit', function(e) {
                     }
                     console.log(listaTarefasArray);
                  });
-                })
-                inputTarefa.value = "";
+    })
+    inputTarefa.value = "";
 
     // limpar o form - reset()
-    this.reset();
+    // this.reset();
 })
