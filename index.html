@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+
+    <div>
+        <div>
+            <h1>Minha Lista de Tarefas</h1>
+        </div>
+
+        <div>
+            <h2>Informações Digitadas</h2>
+            <table id="resumo">
+                <thead>
+                    <tr id="cabecalho">
+                        <th class="descricao">Descrição</th>
+                        <th class="responsavel">Responsável</th>
+                        <th class="importancia">Importância</th>
+                        <th class="departamento">Departamento</th>
+                    </tr>
+                </thead>
+                <tbody>  
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Adicionar Tarefa</h2>
+        <form id="dados" method="get" action="">
+            <div>
+
+                <div>
+                    <label for="descricao">Descrição</label>
+                    <input type="text" id="descricao" name="descricao"
+                        placeholder="ex: Marcar reunião" required autofocus>
+                </div>
+
+                <div>
+                    <label for="responsavel">Responsável</label>
+                    <input type="text" id="responsavel" name="responsavel"
+                        placeholder="ex: Gabriel" required>
+                </div>
+
+                <div>
+                    <label for="importancia">Importância</label>
+                    <select id="importancia" required>
+                        <option value="">Selecione o nível da tarefa</option>
+                        <option value="Prioridade">Prioridade</option>
+                        <option value="Urgente">Urgente</option>
+                        <option value="Padrão">Padrão</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="departamento">Departamento</label>
+                    <input type="text" id="departamento" name="departamento" 
+                        placeholder="ex: Projetos" required>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Confirmar</button>
+            </div>
+        </form>
+    </div>  
+    <script src="./js/tarefas.js"></script>
+</body>
+</html>
