@@ -1,11 +1,5 @@
-// pegar o tbody no HTML e passar para o Maravilhoso Mundo JS
 const tbody = document.querySelector('tbody');
-
-// pegar o form = document.querySelector('form')
-// atribuir um escutador de eventos (submit) = .addEventListener('submit')
-// criar uma função = ela irá receber o evento = , function(e) 
-// cancelar o evento padrão
-
+let listaTarefasArray = [];
 
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -21,27 +15,49 @@ document.querySelector('form').addEventListener('submit', function(e) {
     // criar a tr
     const tr = document.createElement('tr');
     
-    // criar um for para percorrer o Array, para cada índice do Array =  campos.forEach(campo =>
-    // criar uma td = const td = document.createElement('td');
-    // pegar o conteúdo digitado no campo e passar para a td = td.textContent = campo.value;
-    // vincular a td na tr  = tr.appendChild(td);
-    
     campos.forEach(campo => {
-        // console.log(campo.value);
         const td = document.createElement('td');
         td.textContent = campo.value;
         tr.appendChild(td);
     })
-    
-    // for(let i = 0; i < campos.length; i++){
-    //     const td = document.createElement('td');
-    //     td.textContent = campos[i].value;
-    //     tr.appendChild(td);
-    // }
 
     // colocar no tbody a linha que foi criada com as suas respectivss td´s
-
     tbody.appendChild(tr);
+
+    const listaTarefasArrayUl = document.querySelector("#lista-tarefas");
+    //Criando um elemento list-item(li)
+    let li = document.createElement("li");
+    li.textContent = tbody.value;
+
+    //Adicionando o elemento li ao parentNode UL.
+    listaTarefasArrayUl.appendChild(li);
+    
+    //Adicionando um botão dentro do li para excluir a tarefa.
+    let botaApagaTarefa = document.createElement("button");
+
+    //Adicionando um texto ao botao de apagar tarefas.
+    botaApagaTarefa.textContent = " x ";
+
+    //Adicionado uma classe ao botao de apagar tarefa
+    botaApagaTarefa.setAttribute("class","exclui");
+
+    //Adicionando o botão ao elemento li.
+    li.appendChild(botaApagaTarefa);
+    
+    //Evento que será disparado quando clicarmos em x, ou seja, quando for
+    //clicado na tarefa vai ser removida da lista e também do Array.
+    botaApagaTarefa.addEventListener('click',(evento)=>{
+                console.log(evento.target.parentNode.textContent.split(" ")[0]);
+                 evento.target.parentNode.remove();
+                 listaTarefasArray.forEach(tarefa=>{
+                    
+                    if(evento.target.parentNode.textContent.split(" ")[0] == tarefa){
+                        listaTarefasArray.splice(listaTarefasArray.indexOf(tarefa),1);
+                    }
+                    console.log(listaTarefasArray);
+                 });
+                })
+                inputTarefa.value = "";
 
     // limpar o form - reset()
     this.reset();

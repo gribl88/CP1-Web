@@ -10,26 +10,10 @@
     <div>
         <div>
             <h1>Minha Lista de Tarefas</h1>
-        </div>
 
-        <div>
-            <h2>Informações Digitadas</h2>
-            <table id="resumo">
-                <thead>
-                    <tr id="cabecalho">
-                        <th class="descricao">Descrição</th>
-                        <th class="responsavel">Responsável</th>
-                        <th class="importancia">Importância</th>
-                        <th class="departamento">Departamento</th>
-                    </tr>
-                </thead>
-                <tbody>  
-                </tbody>
-            </table>
-        </div>
-
-        <h2>Adicionar Tarefa</h2>
-        <form id="dados" method="get" action="">
+            
+            <h2>Cadastre suas tarefas</h2>
+            <form id="dados" method="get" action="">
             <div>
 
                 <div>
@@ -43,7 +27,7 @@
                     <input type="text" id="responsavel" name="responsavel"
                         placeholder="ex: Gabriel" required>
                 </div>
-
+                
                 <div>
                     <label for="importancia">Importância</label>
                     <select id="importancia" required>
@@ -62,9 +46,31 @@
             </div>
 
             <div>
-                <button type="submit" class="btn btn-primary">Confirmar</button>
+                <button type="submit" value="">Adicionar</button>
             </div>
         </form>
+        
+        <div>
+            <h2>Suas Tarefas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="descricao">Descrição</th>
+                        <th class="responsavel">Responsável</th>
+                        <th class="importancia">Importância</th>
+                        <th class="departamento">Departamento</th>
+                    </tr>
+                </thead>
+                <tbody>  
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <ul id="lista-tarefas">
+
+            </ul>
+        </div>
     </div>  
     <script src="./js/tarefas.js"></script>
 </body>
